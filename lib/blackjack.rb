@@ -32,7 +32,10 @@ end
 
 def hit?(arg)
   prompt_user
-  get_user_input
+  answer = get_user_input
+  if answer == 'h'
+    arg += deal_card
+  end
   arg
 end
 
