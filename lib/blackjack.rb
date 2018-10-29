@@ -30,21 +30,29 @@ def initial_round
   sum
 end
 
+def invalid_command
+  puts "This is an invalid command!"
+end
+
 def hit?(arg)
   prompt_user
-  get_user_input
+  answer = get_user_input
+  if answer == 'h'
+    arg += deal_card
+    display_card_total arg
+  end
   arg
 end
 
-def invalid_command
-  # code invalid_command here
-end
+
 
 #####################################################
 # get every test to pass before coding runner below #
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  initial_sum = initial_round
+  total = hit? initial_sum
+  end_game total
 end
-    
