@@ -40,6 +40,8 @@ def hit?(arg)
     if answer == 'h'
       arg += deal_card
       display_card_total arg
+    elsif answer == 's'
+      puts "You choose to stay."
     else 
       invalid_command
       prompt_user
