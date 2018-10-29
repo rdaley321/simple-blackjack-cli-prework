@@ -56,7 +56,7 @@ def runner
     display_card_total grand_total
     break if grand_total > 21
   end
-  end_game grand_total
+  end_game total
 end
     
 runner
