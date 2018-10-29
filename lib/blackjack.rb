@@ -30,18 +30,28 @@ def initial_round
   sum
 end
 
+def invalid_command
+  puts "This is an invalid command!"
+end
+
 def hit?(arg)
   prompt_user
   answer = get_user_input
   if answer == 'h'
     arg += deal_card
+    display_card_total arg
+  elsif answer == 's'
+    puts "STAY!"
+    display_card_total arg
+  else 
+    invalid_command
+    prompt_user
+    answer
   end
   arg
 end
 
-def invalid_command
-  # code invalid_command here
-end
+
 
 #####################################################
 # get every test to pass before coding runner below #
@@ -51,11 +61,6 @@ def runner
   welcome
   initial_sum = initial_round
   total = hit? initial_sum
-  loop do
-    grand_total = hit? total
-    display_card_total grand_total
-    break if grand_total > 21
-  end
   end_game total
 end
     
