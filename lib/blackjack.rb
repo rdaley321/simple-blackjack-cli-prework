@@ -37,7 +37,6 @@ end
 def hit?(arg)
   prompt_user
   answer = get_user_input
-  while arg < 21 && answer != 's'
     if answer == 'h'
       arg += deal_card
       display_card_total arg
@@ -46,7 +45,6 @@ def hit?(arg)
       prompt_user
       answer
     end
-  end
   if answer == 's'
     puts "You choose to stay."
   end
