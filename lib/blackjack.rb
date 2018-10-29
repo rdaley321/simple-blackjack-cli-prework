@@ -41,17 +41,17 @@ def hit?(arg)
     if answer == 'h'
       arg += deal_card
       display_card_total arg
-    elsif answer == 's'
-      puts "Stay"
-      display_card_total arg
     else 
       invalid_command
       prompt_user
       answer
     end
   end
+  if answer == 's'
+    puts "You choose to stay."
+  end
   if arg == 21
-    puts ""
+    puts "BLACKJACK!"
   end
   arg
 end
