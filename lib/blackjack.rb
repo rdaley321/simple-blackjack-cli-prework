@@ -36,8 +36,8 @@ end
 
 def hit?(arg)
   prompt_user
+  answer = get_user_input
   while arg < 21 && answer != 's'
-    answer = get_user_input
     if answer == 'h'
       arg += deal_card
       display_card_total arg
