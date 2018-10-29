@@ -52,6 +52,6 @@ def runner
   initial_sum = initial_round
   total = hit? initial_sum
   display_card_total total
-  end_game
+  end_game total
 end
     
