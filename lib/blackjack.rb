@@ -37,18 +37,9 @@ end
 def hit?(arg)
   prompt_user
   answer = get_user_input
-    if answer == 'h'
-      arg += deal_card
-      display_card_total arg
-    elsif answer == 's'
-      puts "You choose to stay."
-    else 
-      invalid_command
-      prompt_user
-      answer
-    end
-  if arg == 21
-    puts "BLACKJACK!"
+  if answer == 'h'
+    arg += deal_card
+    display_card_total arg
   end
   arg
 end
