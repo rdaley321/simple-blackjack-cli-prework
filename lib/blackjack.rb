@@ -47,9 +47,6 @@ def hit?(arg)
       prompt_user
       answer
     end
-  if answer == 's'
-    puts "You choose to stay."
-  end
   if arg == 21
     puts "BLACKJACK!"
   end
