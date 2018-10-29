@@ -37,17 +37,18 @@ end
 def hit?(arg)
   prompt_user
   answer = get_user_input
-  if answer == 'h'
-    arg += deal_card
-    display_card_total arg
-  elsif answer == 's'
-    puts "STAY!"
-    display_card_total arg
-  else 
-    invalid_command
-    prompt_user
-    answer
-  end
+  while arg < 21
+    if answer == 'h'
+      arg += deal_card
+      display_card_total arg
+    elsif answer == 's'
+      puts "STAY!"
+      display_card_total arg
+    else 
+      invalid_command
+      prompt_user
+      answer
+    end
   arg
 end
 
